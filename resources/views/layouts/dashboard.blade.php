@@ -25,6 +25,7 @@
         </div>
         <ul class="list-unstyled">
             <li><a href="{{route('index')}}" class="text-white d-block p-3 ">Home</a></li>
+            <li><a href="{{route('income.index')}}" class="text-white d-block p-3 ">my income</a></li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf
@@ -34,7 +35,7 @@
         </ul>
     </div>
 
-    <div class="content-area" style="margin-left: 250px; padding: 20px;">
+    <div style="margin-left: 250px; padding: 20px; width: 100%;">
         @yield('content')
     </div>
 </div>

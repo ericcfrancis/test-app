@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\IncomeController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,3 +27,6 @@ Route::get('/login', function(){
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// income module
+Route::resource('income', IncomeController::class);
