@@ -42,7 +42,7 @@ class AuthController extends Controller
 
         $user =  Auth::user();
         
-        return redirect()->route('dashboard')->with('success', 'Login');
+        return redirect()->route('user-dashboard')->with('success', 'Login');
     }
 
     //logout
