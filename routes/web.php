@@ -14,9 +14,10 @@ Route::get('/register', function(){
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-Route::get('/dashboard', function (){
-    return view('auth.user-dashboard');
-})->name('user-dashboard');
+Route::get('/dashboard', [AuthController::class, 'index'])->name('index');
+
+Route::get('/profile/edit', [AuthController::class, 'edit'])->name('profile.edit');
+Route::post('/profile/update', [AuthController::class, 'update'])->name('profile.update');
 
 Route::get('/login', function(){
     return view('auth.login');
@@ -24,4 +25,3 @@ Route::get('/login', function(){
 
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-// Route::post('/logout'. [AuthController::class, 'logout'])->middleware('auth');

@@ -24,8 +24,7 @@ class AuthController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Registered');
-        // return response()->json(['message' => 'User registered successfully']);
+        return redirect()->route('login.form')->with('success', 'Registered');
     }
 
     //login
@@ -42,7 +41,7 @@ class AuthController extends Controller
 
         $user =  Auth::user();
         
-        return redirect()->route('user-dashboard')->with('success', 'Login');
+        return redirect()->route('index')->with('success', 'Login');
     }
 
     //logout
@@ -50,6 +49,42 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect()->route('home')->with('success', 'Logout');
-        // return response()->json(['message' => 'Logged out successful']);
+    }
+
+    //index
+    public function index()
+    {
+        $user = auth()->user();
+
+        return view('auth.index', compact('user'));
+    }
+
+    //edit
+    public function edit()
+    {
+        $user = auth()->user();
+        return view('auth.profile.edit', compact('user'));
+    }
+
+    //update
+    public function update(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . auth()->id(), 
+            'password' => 'nullable|string|min:8|confirmed', 
+        ]);
+
+        $user = auth()->user();
+
+        $user->name = $validated['name'];
+        $user->email = $validated['email'];
+
+        if ($request->filled('password')) {
+            $user->password = Hash::make($validated['password']);
+        }
+
+        $user->save();
+        return view('auth.index', compact('user'));
     }
 }
