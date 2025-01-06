@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-info">
             <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a href="{{route('home') }}" class="navbar-brand">Test</a>
@@ -30,12 +30,16 @@
         </nav>
     </header>
 
-    <main class="container">
-        @yield('content')
-    </main>
+    <body>
+        <main class="container">
+            @yield('content')
+        </main>
+    </body>
 
     <footer>
-        <p>&copy;ericdev | 2025</p>
+        <div class="text-center">
+            <p class="text-center mt-2">&copy;ericdev | 2025</p>
+        </div>
     </footer>
     
 </body>
