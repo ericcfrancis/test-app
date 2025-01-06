@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my-test-app</title>
     <!-- <link rel="stylesheet" href="{{ asset('css/app.scss') }}" > -->
-     @vite(['resources/sass/app.scss'])
+     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <header>
@@ -31,7 +31,7 @@
     </header>
 
     <body>
-        <main class="container">
+        <main>
             @yield('content')
         </main>
     </body>
