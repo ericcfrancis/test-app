@@ -22,7 +22,7 @@
                 <tbody>
                     @foreach($incomes as $income)
                         <tr>
-                            <td>RM{{ number_format($income->amount, 2) }}</td>
+                            <td class="text-uppercase">RM{{ number_format($income->amount, 2) }}</td>
                             <td>{{ $income->description ?? 'N/A' }}</td>
                             <td>{{ $income->date->format('Y-m-d') }}</td>
                             <td>{{ $income->category ?? 'N/A' }}</td>
@@ -33,7 +33,7 @@
                                 <form action="{{ route('income.destroy', $income->id) }}" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this income?')">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this income?')">delete</button>
                                 </form>
                             </td>
                         </tr>

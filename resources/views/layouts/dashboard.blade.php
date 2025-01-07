@@ -24,7 +24,7 @@
             <h3 class="text-start px-3">testting</h3>
         </div>
         <ul class="list-unstyled">
-            <li><a href="{{route('index')}}" class="text-white d-block p-3 ">Home</a></li>
+            <li><a href="{{route('index')}}" class="text-white d-block p-3 ">my dashboard</a></li>
             <li><a href="{{route('income.index')}}" class="text-white d-block p-3 ">my income</a></li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
@@ -35,7 +35,7 @@
         </ul>
     </div>
 
-    <div style="margin-left: 250px; padding: 20px; width: 100%;">
+    <div style="margin-left: 250px; padding: 20px; width: 100%;" class="text-lowercase">
         @yield('content')
     </div>
 </div>
