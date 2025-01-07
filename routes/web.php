@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IncomeController;
+use App\Http\Controllers\ExpenseController;
 
 
 Route::get('/', function () {
@@ -30,3 +31,6 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // income module
 Route::resource('income', IncomeController::class);
+
+// expense module
+Route::resource('expense', ExpenseController::class);

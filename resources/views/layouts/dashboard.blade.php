@@ -26,6 +26,7 @@
         <ul class="list-unstyled">
             <li><a href="{{route('index')}}" class="text-white d-block p-3 ">my dashboard</a></li>
             <li><a href="{{route('income.index')}}" class="text-white d-block p-3 ">my income</a></li>
+            <li><a href="{{route('expense.index')}}" class="text-white d-block p-3 ">my expense</a></li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf
