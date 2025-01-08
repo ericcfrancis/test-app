@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\FinanceController;
 
 
 Route::get('/', function () {
@@ -34,3 +35,6 @@ Route::resource('income', IncomeController::class);
 
 // expense module
 Route::resource('expense', ExpenseController::class);
+
+// finance module
+Route::resource('finance', FinanceController::class);
