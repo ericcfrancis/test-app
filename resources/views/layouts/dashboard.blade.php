@@ -13,7 +13,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="{{route('index') }}" class="navbar-brand text-white">Test</a>
+            <a href="{{route('index') }}" class="navbar-brand text-white">MFT</a>
             </div>
         </nav>
     </header>
@@ -21,12 +21,13 @@
     <!-- Sidebar -->
     <div class="sidebar bg-dark-navy-blue text-white" style="width: 250px; height: 100vh; position: fixed;">
         <div class="sidebar-header">
-            <h3 class="text-start px-3">testting</h3>
+            <h3 class="text-start px-3">Dashboard</h3>
         </div>
         <ul class="list-unstyled">
             <li><a href="{{route('index')}}" class="text-white d-block p-3 ">my dashboard</a></li>
-            <li><a href="{{route('income.index')}}" class="text-white d-block p-3 ">my income</a></li>
-            <li><a href="{{route('expense.index')}}" class="text-white d-block p-3 ">my expense</a></li>
+            <li><a href="{{route('income.index')}}" class="text-white d-block p-3 ">income</a></li>
+            <li><a href="{{route('expense.index')}}" class="text-white d-block p-3 ">expense</a></li>
+            <li><a href="{{route('finance.index')}}" class="text-white d-block p-3 ">finance</a></li>
             <li>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf

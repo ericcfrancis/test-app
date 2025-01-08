@@ -4,7 +4,7 @@
 <div class="row justify-content-center align-items-center">
     <div class="col-5 my-3">
         <div class="row text-center">
-            <h1>test login page</h1>
+            <h1>login</h1>
         </div>
         <form action="{{ route('login') }}" method="POST">
             @csrf

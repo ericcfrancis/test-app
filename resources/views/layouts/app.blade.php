@@ -13,7 +13,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="{{route('home') }}" class="navbar-brand">Test</a>
+            <a href="{{route('home') }}" class="navbar-brand">MFT</a>
             <div class="collapse navbar-collapse" id="navBarToggler">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
